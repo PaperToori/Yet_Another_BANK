@@ -5,8 +5,28 @@ public class Savings extends Account {
 
     // Constructors
     public Savings() {
-    } // this needs to be fixed - id, needs to be given.
+    }
+
+    public Savings(int id) {
+        this.id = id;
+    }
+
+    public Savings(int id, Customer c) {
+        this.id = id;
+        this.owner = c;
+        this.claimed = true;
+    }
 
     // Methods
+    public void addBal(double b) {
+        this.bal += b;
+    }
 
+    public void remBal(double b) {
+        this.bal -= b;
+    }
+
+    public void setRent(double r) {
+        this.rent = r;
+    }
 }
